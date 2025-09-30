@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Happy Birthday, My Love, Dencar Chloe!</title>
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+        :root{
+
+            --primary-pink: #FFB6C1;
+
+            --secondary-gold: #FFD700;
+
+            --tertiary-white: #FFFFFF;
+
+            --text-color: #4B0082;
+
+            --glow-color: #FF69B4;
+
+            --soft-shadow: rgba(0,0,0,0.12);
+
+        }
+
+
+
+        /* --- Base --- */
+
+        html,body{height:100%; margin:0; padding:0; scroll-behavior:smooth;}
+
+        body{
+
+            font-family: "Playfair Display", serif;
+
+            background: linear-gradient(135deg,#FFDAB9,#FFE4E1,#FFF0F5);
+
+            color:var(--text-color);
+
+            overflow-x:hidden;
+
+        }
+
+        section{
+
+            min-height:100vh;
+
+            display:flex;
+
+            flex-direction:column;
+
+            align-items:center;
+
+            justify-content:center;
+
+            padding:48px 20px;
+
+            position:relative;
+
+            text-align:center;
+
+        }
+
+        h1,h2,h3{ font-family: "Great Vibes", cursive; color:var(--glow-color);
+
+            text-shadow:0 0 10px var(--glow-color),0 0 20px var(--glow-color);
+
+            animation:textGlow 1.6s infinite alternate;
+
+            margin:0.3em 0;
+
+        }
+
+        @keyframes textGlow{
+
+            from{ text-shadow:0 0 8px var(--glow-color),0 0 18px var(--glow-color); }
+
+            to{ text-shadow:0 0 18px var(--glow-color),0 0 30px var(--glow-color),0 0 40px var(--glow-color); }
+
+        }
+
+        p{ max-width:900px; line-height:1.6; margin:0.6em auto; }
+
+
+
+        /* --- Floating hearts (decorative) --- */
+
+        .heart{ position:fixed; top:-10%; font-size:2em; opacity:0.7; animation:floatHeart 10s linear infinite; pointer-events:none; z-index:0; }
+
+        @keyframes floatHeart{
+
+            0%{ transform:translateY(0) rotate(0deg); opacity:0.9; }
+
+            50%{ transform:translateY(60vh) rotate(180deg); opacity:0.5; }
+
+            100%{ transform:translateY(140vh) rotate(360deg); opacity:0; }
+
+        }
+
+
+
+        /* --- Welcome --- */
+
+        #welcome{
+
+            background: radial-gradient(circle at 30% 20%, #FFF0F5 0%, #FFDAB9 100%);
+
+            overflow:hidden;
+
+        }
+
+        #welcome h1{ font-size:4rem; }
+
+        #welcome p{ font-size:1.4rem; font-family:"Dancing Script",cursive; color:var(--text-color); text-shadow:1px 1px 6px rgba(255,182,193,0.6); }
+
+
+
+        /* Balloons */
+
+        .balloon{
+
+            position:absolute; width:84px; height:110px; border-radius:50%/60% 60% 40% 40%;
+
+            box-shadow: inset -8px -8px 0 rgba(0,0,0,0.06);
+
+            animation:floatBalloon linear infinite;
+
+        }
+
+        .balloon::after{ content:''; position:absolute; bottom:-28px; left:50%; transform:translateX(-50%); width:2px; height:36px; background:var(--secondary-gold); }
+
+        .balloon:nth-child(1){ left:8%; top:20%; background:#FFC0CB; animation-duration:11s; }
+
+        .balloon:nth-child(2){ left:26%; top:65%; background:#FFB6C1; animation-duration:12.5s; }
+
+        .balloon:nth-child(3){ left:44%; top:20%; background:#FF69B4; animation-duration:10.5s; }
+
+        .balloon:nth-child(4){ left:66%; top:65%; background:#DA70D6; animation-duration:13.5s; }
+
+        .balloon:nth-child(5){ left:84%; top:20%; background:#DDA0DD; animation-duration:12s; }
+
+        @keyframes floatBalloon{ 0%{ transform:translateY(0) } 50%{ transform:translateY(-60px) } 100%{ transform:translateY(0) } }
+
+
+
+        /* --- Love Letter --- */
+
+        #love-letter{
+
+            background-color:#FFF8DC; /* fallback */
+
+            background-image: url('path/to/elegant-paper-texture.png');
+
+            background-size:cover;
+
+            background-repeat:repeat;
+
+            padding-top:84px;
+
+        }
+
+        .letter-content{
+
+            background: rgba(255,255,255,0.82);
+
+            max-width:820px;
+
+            padding:36px;
+
+            border-radius:16px;
+
+            box-shadow:0 12px 30px var(--soft-shadow);
+
+            border: 2px solid rgba(255,182,193,0.35);
+
+            font-family:"Dancing Script",cursive;
+
+            font-size:1.24rem;
+
+            line-height:1.7;
+
+            color:#333;
+
+            text-align:left;
+
+            position:relative;
+
+        }
+
+
+
+        /* --- Memories (gallery) --- */
+
+        #memories{ background:#F8F8FF; padding-top:80px; padding-bottom:80px; }
+
+        .gallery-grid{
+
+            display:grid;
+
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+
+            gap:28px;
+
+            width:100%;
+
+            max-width:1200px;
+
+            margin-top:28px;
+
+            align-items:start;
+
+        }
+
+
+
+        .polaroid-frame{
+
+            background:var(--tertiary-white);
+
+            border-radius:10px;
+
+            padding:12px 12px 60px 12px; /* leave space for caption */
+
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+            position:relative;
+
+            transform-origin:center;
+
+            transition: transform 300ms ease, box-shadow 300ms ease;
+
+            overflow:visible;
+
+            display:flex;
+
+            flex-direction:column;
+
+            align-items:center;
+
+        }
+
+        .polaroid-frame:hover{ transform: translateY(-8px) scale(1.02); box-shadow:0 18px 40px rgba(0,0,0,0.12); }
+
+
+
+        /* Uniform image box so pics don't get cut off */
+
+        .polaroid-frame .photo-wrap{
+
+            width:100%;
+
+            height:220px;
+
+            border-radius:8px;
+
+            overflow:hidden;
+
+            display:block;
+
+            border:1px solid #f0f0f0;
+
+            background:linear-gradient(180deg,#fff,#f7f3f8);
+
+        }
+
+        .polaroid-frame img{
+
+            width:100%;
+
+            height:100%;
+
+            object-fit:cover; /* keep aspect and fill area */
+
+            display:block;
+
+        }
+
+
+
+        .caption{
+
+            position:absolute;
+
+            bottom:14px;
+
+            left:50%;
+
+            transform:translateX(-50%);
+
+            width:calc(100% - 24px);
+
+            text-align:center;
+
+            font-family:"Dancing Script",cursive;
+
+            font-size:1.05rem;
+
+            color:#555;
+
+            padding:6px 8px;
+
+            background:linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6));
+
+            border-radius:8px;
+
+            box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+
+        }
+
+
+
+        /* Tape & sticker: fixed and consistent */
+
+        .tape{
+
+            position:absolute;
+
+            top:-10px;
+
+            left:18%;
+
+            width:56px;
+
+            height:18px;
+
+            border-radius:4px;
+
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+
+            transform: rotate(-6deg);
+
+            display:block;
+
+        }
+
+        .tape.pink{ background: rgba(255,192,203,0.78); }
+
+        .tape.gold{ left:auto; right:18%; transform: rotate(6deg); background: rgba(255,215,0,0.78); }
+
+
+
+        .heart-sticker{
+
+            position:absolute;
+
+            top:-18px;
+
+            right:14px;
+
+            width:26px;
+
+            height:26px;
+
+            background:var(--primary-pink);
+
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+            transform:rotate(15deg);
+
+            box-shadow:0 1px 4px rgba(0,0,0,0.12);
+
+        }
+
+
+
+        /* --- Reasons hearts --- */
+
+        #reasons{ background: linear-gradient(180deg,#FAEBD7,#FFFAF0); padding-bottom:80px; }
+
+        .reasons-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:18px; max-width:920px; margin-top:34px; width:100%; }
+
+        .reason-heart{
+
+            aspect-ratio:1/1;
+
+            display:flex; align-items:center; justify-content:center;
+
+            font-family:"Dancing Script",cursive;
+
+            font-size:1.25rem;
+
+            cursor:pointer;
+
+            user-select:none;
+
+            position:relative;
+
+            transition: transform 200ms ease, box-shadow 200ms ease;
+
+            border-radius:22px;
+
+            padding:12px;
+
+            border:2px solid rgba(255,182,193,0.25);
+
+            background: linear-gradient(180deg,var(--primary-pink),#ff9ebc);
+
+            box-shadow:0 10px 22px rgba(0,0,0,0.08);
+
+            color:var(--tertiary-white);
+
+            text-align:center;
+
+        }
+
+        .reason-heart span{ position:absolute; bottom:120%; left:50%; transform:translateX(-50%); background:rgba(0,0,0,0.85); color:#fff; padding:8px 10px; border-radius:8px; font-size:0.95rem; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity 200ms ease; z-index:20; }
+
+        .reason-heart.active span{ opacity:1; }
+
+        .reason-heart:hover{ transform:scale(1.06) rotate(-4deg); box-shadow:0 18px 34px rgba(0,0,0,0.12); }
+
+
+
+        /* --- Birthday cake --- */
+
+        #birthday-surprise{ background: linear-gradient(to bottom,#FFEBCD,#FDF5E6); padding-bottom:120px; }
+
+        .cake-container{ margin-top:36px; position:relative; display:flex; flex-direction:column; align-items:center; gap:18px; }
+
+        .cake{
+
+            width:320px; height:200px; border-radius:50%/12%; background:linear-gradient(180deg,#FFB4C6,#FF7AB2);
+
+            border:5px solid rgba(255,105,180,0.25); position:relative; box-shadow:0 18px 36px rgba(0,0,0,0.12);
+
+        }
+
+        .cake::before{ content:''; position:absolute; top:12px; left:0; width:100%; height:86%; background:rgba(255,255,255,0.35); border-radius:50%/12%; }
+
+        .candle{ position:absolute; top:-30px; width:14px; height:46px; background:var(--tertiary-white); border-radius:3px; transform-origin:bottom; cursor:pointer; display:flex; justify-content:center; align-items:flex-start; }
+
+        .candle .flame{ position:relative; top:-14px; width:12px; height:18px; border-radius:50%/55% 55% 45% 45%; background:orange; box-shadow:0 0 10px orange, 0 0 20px yellow; animation:flameFlicker 0.18s infinite alternate; }
+
+        .candle.blown-out{ background:#d3d3d3; }
+
+        .candle.blown-out .flame{ display:none; }
+
+        .candle:nth-child(1){ left:16%; }
+
+        .candle:nth-child(2){ left:36%; }
+
+        .candle:nth-child(3){ left:56%; }
+
+        .candle:nth-child(4){ left:76%; }
+
+
+
+        @keyframes flameFlicker{ 0%{ transform:scaleY(1) } 50%{ transform:scaleY(0.9) } 100%{ transform:scaleY(1) } }
+
+
+
+        .wish-message{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:"Great Vibes",cursive; font-size:1.6rem; color:var(--glow-color); text-shadow:0 0 10px var(--glow-color); opacity:0; pointer-events:none; transition:opacity 700ms ease; z-index:5; }
+
+        .wish-message.visible{ opacity:1; }
+
+
+
+        /* --- Constellation (canvas) --- */
+
+        #constellation{ background:#001230; color:var(--tertiary-white); padding:0; }
+
+        #constellation .constellation-wrap{ width:100%; height:70vh; position:relative; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:14px; padding-top:48px; }
+
+        #constellation canvas{ width:100%; height:60vh; display:block; }
+
+
+
+        .constellation-text{ font-family:"Great Vibes",cursive; font-size:2.4rem; color:var(--glow-color); text-shadow:0 0 12px var(--glow-color); z-index:4; }
+
+
+
+        /* --- Final Surprise (rose petals) --- */
+
+        #final-surprise{ background:linear-gradient(to bottom,#FFC0CB,#F08080); overflow:hidden; padding-bottom:120px; }
+
+        .final-message{ font-family:"Great Vibes",cursive; font-size:3.2rem; color:var(--glow-color); text-shadow:0 0 20px var(--glow-color); z-index:2; margin-top:22vh; }
+
+        .final-message p{ margin:0.2em 0; font-family:"Dancing Script",cursive; font-size:1.1rem; color:var(--text-color); }
+
+
+
+        .rose-petal{
+
+            position:absolute;
+
+            width:18px; height:22px; background:linear-gradient(180deg,#ff6aa3,#ffb6dc);
+
+            border-radius:50% 50% 40% 40%;
+
+            opacity:0;
+
+            transform:translateY(-150px) rotate(0deg);
+
+            pointer-events:none;
+
+            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+
+        }
+
+
+
+        /* Floating clickable notes */
+
+        .floating-note{
+
+            position:fixed;
+
+            width:66px; height:66px; border-radius:22px; display:flex; align-items:center; justify-content:center;
+
+            box-shadow:0 10px 26px rgba(0,0,0,0.12); cursor:pointer; font-family:"Dancing Script",cursive; z-index:120;
+
+            background:var(--tertiary-white); color:var(--text-color); border:2px solid rgba(255,182,193,0.34);
+
+            transition:transform 200ms ease;
+
+            clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 50% 75%, 0% 100%, 0% 35%);
+
+        }
+
+        .floating-note span{ display:none; position:absolute; bottom:120%; left:50%; transform:translateX(-50%); background:rgba(0,0,0,0.9); color:#fff; padding:10px 12px; border-radius:8px; white-space:nowrap; z-index:130; }
+
+        .floating-note.active span{ display:block; }
+
+
+
+        /* --- small screens --- */
+
+        @media (max-width:768px){
+
+            #welcome h1{ font-size:2.2rem; }
+
+            #welcome p{ font-size:1.1rem; }
+
+            .letter-content{ font-size:1.06rem; padding:20px; }
+
+            .polaroid-frame .photo-wrap{ height:180px; }
+
+            .cake{ width:260px; height:160px; }
+
+            .final-message{ font-size:2rem; margin-top:14vh; }
+
+            .constellation-text{ font-size:1.6rem; }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- Background music with simple controls (autoplay muted until user unmutes) -->
+
+    <audio id="background-music" loop muted>
+
+        <source src="Chloe.mp3" type="audio/mpeg">
+
+        Your browser does not support audio.
+
+    </audio>
+
+    <div style="position:fixed; left:12px; bottom:12px; z-index:200;">
+
+        <button id="musicToggle" title="Play / Unmute music" style="padding:10px 14px; border-radius:12px; border:none; cursor:pointer; background:linear-gradient(180deg,#fff,#ffe6ef); box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+
+            🔈 Play Music
+
+        </button>
+
+    </div>
+
+
+
+    <!-- floating hearts decorative -->
+
+    <div class="heart" style="left:5%; animation-delay:0s;">❤️</div>
+
+    <div class="heart" style="left:18%; animation-delay:2s; font-size:1.6em; color:#FFC0CB;">💖</div>
+
+    <div class="heart" style="left:30%; animation-delay:4s;">❤️</div>
+
+    <div class="heart" style="left:44%; animation-delay:6s; font-size:1.8em; color:#FFB6C1;">💖</div>
+
+    <div class="heart" style="left:58%; animation-delay:8s;">❤️</div>
+
+    <div class="heart" style="left:72%; animation-delay:1s; font-size:2.2em; color:#FFC0CB;">💖</div>
+
+    <div class="heart" style="left:86%; animation-delay:3s;">❤️</div>
+
+
+
+    <!-- Floating notes -->
+
+    <div class="floating-note" style="top:8%; left:4%;" data-surprise="You're my sunshine!">💖<span>You're my sunshine!</span></div>
+
+    <div class="floating-note" style="top:20%; right:8%;" data-surprise="I love your laugh!">💖<span>I love your laugh!</span></div>
+
+    <div class="floating-note" style="top:50%; left:3%;" data-surprise="My heart belongs to you!">💖<span>My heart belongs to you!</span></div>
+
+    <div class="floating-note" style="top:80%; right:6%;" data-surprise="Every moment with you is a gift.">💖<span>Every moment with you is a gift.</span></div>
+
+
+
+    <!-- Welcome -->
+
+    <section id="welcome" aria-label="Welcome">
+
+        <div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div>
+
+        <h1>Happy Birthday, My Love, Dencar Chloe!</h1>
+
+        <p>Today, we celebrate the most beautiful soul in my life—you.</p>
+
+    </section>
+
+
+
+    <!-- Love letter -->
+
+    <section id="love-letter" aria-label="Love Letter">
+
+        <h2>A Love Letter Just for You</h2>
+
+        <div class="letter-content" role="article">
+
+            <p>My dearest Dencar Chloe,</p>
+            
+            <p>		From the moment you came into my life, everything changed. I never thought i’d find someone who could make me feel this way—safe, happy, and deeply loved. You’re not just my partner, you’re my best friend, my safe place, and the reason i look forward to every single day. you’ve brought so much joy, color, and meaning into my life, and I can’t imagine going through this world without you by my side.</p>
+
+            <p>		I can’t believe how fast time goes… in just 2 days, it’ll be our 1 year of talking already. through everything, all the ups and downs, the struggles we faced even just last week or yesterday, we still keep choosing and fighting for our love. And that’s what makes us stronger, that’s what makes us us.</p>
+
+            <p>		Today, I just want you to know how thankful i am for you. You’re the most special person in my life, the one who makes me smile no matter what. I hope this birthday reminds you how loved and appreciated you are, not only by me but by everyone who’s lucky to have you.</p>
+
+            <p>		Thank you for staying, for fighting, for loving me the way you do. I promise to always love you, take care of you, and be here through every high and every low. i love you so much, my baby Chloe 💕</p>
+           
+            <p>Happy Birthday, my love. I’m so blessed to be yours.</p>
+
+            <p style="text-align:right; margin-top:18px; font-size:1.2rem;">Your Baby, Jairus</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Memories gallery -->
+
+<section id="memories" aria-label="Memories">
+
+    <h2>Pictures of You</h2>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Polaroid 1 -->
+
+        <div class="polaroid-frame" style="transform:rotate(-3deg);">
+
+            <div class="tape pink" aria-hidden="true"></div>
+
+            <div class="photo-wrap">
+
+                <img src="91211382-3F3D-439B-8332-1CDF84AD3CA3.png" alt="Memory 1">
+
+            </div>
+
+            <div class="caption">date after not meeting for 2 months</div>
+
+            <div class="heart-sticker" aria-hidden="true"></div>
+
+        </div>
+
+
+
+        <!-- Polaroid 2 -->
+
+        <div class="polaroid-frame" style="transform:rotate(5deg);">
+
+            <div class="tape gold" aria-hidden="true"></div>
+
+            <div class="photo-wrap">
+
+                <img src="4AAC0762-EAB8-41F0-ADAC-679230B786E7.png" alt="Memory 2">
+
+            </div>
+
+            <div class="caption">Cutie selfie After Moving Up</div>
+
+        </div>
+
+
+
+        <!-- Polaroid 3 -->
+
+        <div class="polaroid-frame" style="transform:rotate(-2deg);">
+
+            <div class="tape pink" aria-hidden="true"></div>
+
+            <div class="photo-wrap">
+
+                <img src="9B90EFDC-3C2A-4697-A7E6-0414E02A22DD.png" alt="Memory 3">
+
+            </div>
+
+            <div class="caption">My Baby's beautiful smile</div>
+
+        </div>
+
+
+
+        <!-- Polaroid 4 -->
+
+        <div class="polaroid-frame" style="transform:rotate(4deg);">
+
+            <div class="tape gold" aria-hidden="true"></div>
+
+            <div class="photo-wrap">
+
+                <img src="25DE071D-E81E-44A4-9130-5F9A24A6DF6D.png" alt="Memory 4">
+
+            </div>
+
+            <div class="caption">Your new hair color look</div>
+
+            <div class="heart-sticker" aria-hidden="true"></div>
+
+        </div>
+
+
+
+        <!-- Polaroid 5 -->
+
+        <div class="polaroid-frame" style="transform:rotate(-6deg);">
+
+            <div class="tape pink" aria-hidden="true"></div>
+
+            <div class="photo-wrap">
+
+                <img src="79CCE398-67DF-45B6-A4E8-868507AE6D7F.png" alt="Memory 5">
+
+            </div>
+
+            <div class="caption">Chef Baby Chloe</div>
+
+        </div>
+
+
+
+        <!-- Polaroid 6 -->
+
+        <div class="polaroid-frame" style="transform:rotate(1deg);">
+
+            <div class="tape gold" aria-hidden="true"></div>
+
+            <div class="photo-wrap">
+
+                <img src="E5385C0C-0CA4-43C0-BDC2-465CD0E87DE2.png" alt="Memory 6">
+
+            </div>
+
+            <div class="caption">Just us, being us</div>
+
+        </div>
+
+
+
+        <!-- Polaroid 7 (added) -->
+
+        <div class="polaroid-frame" style="transform:rotate(-4deg);">
+
+            <div class="tape pink" aria-hidden="true"></div>
+
+            <div class="photo-wrap">
+
+                <img src="E62B2CA8-217A-49D9-9681-C8B0DB882058.png" alt="Memory 7">
+
+            </div>
+
+            <div class="caption">Cutie Date of us</div>
+
+            <div class="heart-sticker" aria-hidden="true"></div>
+
+        </div>
+
+
+
+        <!-- Polaroid 8 (added) -->
+
+        <div class="polaroid-frame" style="transform:rotate(3deg);">
+
+            <div class="tape gold" aria-hidden="true"></div>
+
+            <div class="photo-wrap">
+
+                <img src="81E21B8F-C5FC-47D1-8215-FFD39E153BE9.png" alt="Memory 8">
+
+            </div>
+
+            <div class="caption">Jollibee date after arcade</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- Reasons -->
+
+    <section id="reasons" aria-label="Reasons I Love You">
+
+        <h2>Reasons I Love You</h2>
+
+        <div class="reasons-grid">
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>Your Beautiful Smile</span></div>
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>Your Genuine Heart</span></div>
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>The way you make me feel comfortable</span></div>
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>Your bravery in challenges/span></div>
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>Your Fani Humour</span></div>
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>Your insightful conversations</span></div>
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>Your comforting presence</span></div>
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>Every little thing about you</span></div>
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>The way you light up my heart/span></div>
+
+            <div class="reason-heart" tabindex="0" role="button" aria-pressed="false">💖<span>Because you're simply you</span></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Birthday surprise -->
+
+    <section id="birthday-surprise" aria-label="Birthday Surprise">
+
+        <h2>Your Birthday Surprise!</h2>
+
+        <p>Click on each candle to blow it out — when all are out, a special wish will appear.</p>
+
+        <div class="cake-container">
+
+            <div class="cake" role="img" aria-label="Birthday cake">
+
+                <div class="candle" id="candle1" tabindex="0"><div class="flame"></div></div>
+
+                <div class="candle" id="candle2" tabindex="0"><div class="flame"></div></div>
+
+                <div class="candle" id="candle3" tabindex="0"><div class="flame"></div></div>
+
+                <div class="candle" id="candle4" tabindex="0"><div class="flame"></div></div>
+
+            </div>
+
+            <div class="wish-message" id="wishMessage" aria-live="polite">Make a wish, my love… because mine already came true when I found you.</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Constellation (canvas) -->
+
+    <section id="constellation" aria-label="Constellation">
+
+        <h2>A Constellation of Our Love</h2>
+
+        <div class="constellation-wrap">
+
+            <canvas id="starsCanvas"></canvas>
+
+            <div class="constellation-text" aria-hidden="true">I ❤️ U</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Final surprise -->
+
+    <section id="final-surprise" aria-label="Final Surprise">
+
+        <div class="final-message">
+
+            <p>Forever isn’t long enough with you.</p>
+
+            <p>Happy Birthday, my darling Chloe. I love you endlessly.</p>
+
+        </div>
+
+    </section>
+
+
+
+    <script>
+
+        /* ---------- Music controls (autoplay policies) ---------- */
+
+        (function(){
+
+            const bgMusic = document.getElementById('background-music');
+
+            const musicToggle = document.getElementById('musicToggle');
+
+            let musicPlaying = false;
+
+            musicToggle.addEventListener('click', () => {
+
+                if(!musicPlaying){
+
+                    bgMusic.muted = false;
+
+                    bgMusic.play().catch(()=>{ /* ignore */});
+
+                    musicToggle.textContent = '🔊 Pause Music';
+
+                    musicPlaying = true;
+
+                } else {
+
+                    bgMusic.pause();
+
+                    musicToggle.textContent = '🔈 Play Music';
+
+                    musicPlaying = false;
+
+                }
+
+            });
+
+        })();
+
+
+
+        /* ---------- Floating notes interactivity ---------- */
+
+        document.querySelectorAll('.floating-note').forEach(note => {
+
+            // ensure keyboard accessibility
+
+            note.setAttribute('tabindex','0');
+
+            note.addEventListener('click', () => {
+
+                note.classList.toggle('active');
+
+                // show the text inside <span> is toggled by CSS
+
+                setTimeout(() => note.classList.remove('active'), 5000);
+
+            });
+
+            note.addEventListener('keydown', (e) => {
+
+                if(e.key === 'Enter' || e.key === ' ') {
+
+                    e.preventDefault();
+
+                    note.click();
+
+                }
+
+            });
+
+        });
+
+
+
+        /* ---------- Reasons hearts interactivity ---------- */
+
+        (function reasonsSetup(){
+
+            const reasons = document.querySelectorAll('.reason-heart');
+
+            reasons.forEach(reason => {
+
+                // ensure keyboard accessibility attributes already set in DOM; still handle key events
+
+                reason.addEventListener('click', () => {
+
+                    // close others
+
+                    document.querySelectorAll('.reason-heart.active').forEach(h => { if(h !== reason) { h.classList.remove('active'); h.setAttribute('aria-pressed','false'); }});
+
+                    const isActive = reason.classList.toggle('active');
+
+                    reason.setAttribute('aria-pressed', String(!!isActive));
+
+                    // auto-hide after 4s
+
+                    if(isActive){
+
+                        setTimeout(() => { reason.classList.remove('active'); reason.setAttribute('aria-pressed','false'); }, 4000);
+
+                    }
+
+                });
+
+                reason.addEventListener('keydown', (e) => {
+
+                    if(e.key === 'Enter' || e.key === ' ') {
+
+                        e.preventDefault();
+
+                        reason.click();
+
+                    }
+
+                });
+
+            });
+
+        })();
+
+
+
+        /* ---------- Cake interactivity ---------- */
+
+        (function cakeSetup(){
+
+            let blownOutCandles = 0;
+
+            const candles = Array.from(document.querySelectorAll('.candle'));
+
+            const wishMessage = document.getElementById('wishMessage');
+
+
+
+            function checkAll(){
+
+                if(blownOutCandles === candles.length){
+
+                    wishMessage.classList.add('visible');
+
+                }
+
+            }
+
+
+
+            candles.forEach(candle => {
+
+                // prevent double-counting by checking class
+
+                const blow = () => {
+
+                    if(!candle.classList.contains('blown-out')){
+
+                        candle.classList.add('blown-out');
+
+                        blownOutCandles++;
+
+                        checkAll();
+
+                    }
+
+                };
+
+                candle.addEventListener('click', blow);
+
+                candle.addEventListener('keydown', (e) => {
+
+                    if(e.key === 'Enter' || e.key === ' ') {
+
+                        e.preventDefault();
+
+                        blow();
+
+                    }
+
+                });
+
+            });
+
+        })();
+
+
+
+        /* ---------- Constellation: draw stars & connect to text shape ---------- */
+
+        (function initConstellation(){
+
+            const canvas = document.getElementById('starsCanvas');
+
+            if(!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+
+            const DPR = window.devicePixelRatio || 1;
+
+
+
+            function resize(){
+
+                canvas.width = canvas.clientWidth * DPR;
+
+                canvas.height = canvas.clientHeight * DPR;
+
+                ctx.setTransform(DPR,0,0,DPR,0,0);
+
+            }
+
+
+
+            const stars = [];
+
+            const starCount = 80;
+
+            function genStars(){
+
+                stars.length = 0;
+
+                for(let i=0;i<starCount;i++){
+
+                    stars.push({
+
+                        x: Math.random(),
+
+                        y: Math.random()*0.8 + 0.1,
+
+                        r: Math.random()*1.8 + 0.6,
+
+                        tw: Math.random()*2 + 1,
+
+                        phase: Math.random()*Math.PI*2
+
+                    });
+
+                }
+
+            }
+
+            genStars();
+
+
+
+            function draw(){
+
+                const W = canvas.clientWidth;
+
+                const H = canvas.clientHeight;
+
+                ctx.clearRect(0,0,W,H);
+
+                // background subtle
+
+                const g = ctx.createLinearGradient(0,0,0,H);
+
+                g.addColorStop(0,'#00102a');
+
+                g.addColorStop(1,'#001a46');
+
+                ctx.fillStyle = g;
+
+                ctx.fillRect(0,0,W,H);
+
+
+
+                // draw stars
+
+                for(let s of stars){
+
+                    const x = s.x * W;
+
+                    const y = s.y * H;
+
+                    const twinkle = 0.6 + 0.4 * Math.sin(Date.now()/600 * s.tw + s.phase);
+
+                    ctx.beginPath();
+
+                    ctx.fillStyle = `rgba(255,255,255,${0.6*twinkle})`;
+
+                    ctx.arc(x,y,s.r * twinkle,0,Math.PI*2);
+
+                    ctx.fill();
+
+                }
+
+
+
+                // draw subtle connecting lines forming 'I ❤ U' roughly using hard-coded points scaled to canvas
+
+                ctx.strokeStyle = 'rgba(255,105,180,0.18)';
+
+                ctx.lineWidth = 1.6;
+
+                const pts = [
+
+                    [0.22*W, 0.22*H],[0.22*W,0.6*H], // I
+
+                    [0.43*W,0.3*H],[0.5*W,0.38*H],[0.57*W,0.3*H],[0.64*W,0.38*H],[0.57*W,0.6*H], // heart-ish
+
+                    [0.78*W,0.28*H],[0.78*W,0.6*H],[0.78*W,0.28*H] // U vertical
+
+                ];
+
+                ctx.beginPath();
+
+                for(let i=0;i<pts.length;i++){
+
+                    const [x,y] = pts[i];
+
+                    if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+
+                }
+
+                ctx.stroke();
+
+
+
+                // animate: connect random nearby stars with faint lines occasionally
+
+                for(let i=0;i<25;i++){
+
+                    const a = stars[Math.floor(Math.random()*stars.length)];
+
+                    const b = stars[Math.floor(Math.random()*stars.length)];
+
+                    const ax = a.x * W, ay = a.y * H;
+
+                    const bx = b.x * W, by = b.y * H;
+
+                    const dist = Math.hypot(ax-bx,ay-by);
+
+                    if(dist < 120){
+
+                        ctx.beginPath();
+
+                        ctx.strokeStyle = `rgba(255,105,180,${0.05 + Math.random()*0.06})`;
+
+                        ctx.moveTo(ax,ay); ctx.lineTo(bx,by);
+
+                        ctx.stroke();
+
+                    }
+
+                }
+
+
+
+                requestAnimationFrame(draw);
+
+            }
+
+
+
+            window.addEventListener('resize', () => { resize(); genStars(); });
+
+            // initial sizing
+
+            resize();
+
+            draw();
+
+        })();
+
+
+
+        /* ---------- Final surprise: rose petals generator ---------- */
+
+        (function petals(){
+
+            const container = document.getElementById('final-surprise');
+
+            if(!container) return;
+
+            const petalCount = 36;
+
+            for(let i=0;i<petalCount;i++){
+
+                const el = document.createElement('div');
+
+                el.className = 'rose-petal';
+
+                // random start left
+
+                const startLeft = Math.random()*100;
+
+                el.style.left = startLeft + 'vw';
+
+                // random animation duration and delay using CSS variables for per-petal behavior
+
+                const duration = 8 + Math.random()*10; // sec
+
+                const delay = Math.random()*6; // sec
+
+                const endX = (Math.random()*120 - 60) + 'vw';
+
+                const rotateEnd = Math.floor(Math.random()*720 - 360) + 'deg';
+
+                el.style.setProperty('--x-end', endX);
+
+                el.style.setProperty('--rotate-end', rotateEnd);
+
+                el.style.opacity = 1;
+
+                container.appendChild(el);
+
+
+
+                // animate using JS because CSS custom computations easier here
+
+                (function animatePetal(el, startLeft, duration, delay){
+
+                    const start = () => {
+
+                        const startTime = performance.now();
+
+                        const startTop = -40;
+
+                        const startLeftPx = (startLeft/100) * window.innerWidth;
+
+                        const endTop = window.innerHeight + 80;
+
+                        const endLeftPx = startLeftPx + (Math.random()*300 - 150);
+
+                        const rotation = Math.random()*720 - 360;
+
+                        el.style.opacity = 1;
+
+                        function frame(now){
+
+                            const t = (now - startTime)/ (duration*1000);
+
+                            if(t >= 1){
+
+                                // restart after short pause
+
+                                el.style.opacity = 0;
+
+                                setTimeout(()=> setTimeout(start, 200 + Math.random()*2000), 300 + Math.random()*100);
+
+                                return;
+
+                            }
+
+                            const ease = t < 0.5 ? 2*t*t : -1 + (4 - 2*t)*t; // simple ease
+
+                            const curTop = startTop + (endTop - startTop) * ease;
+
+                            const curLeft = startLeftPx + (endLeftPx - startLeftPx) * ease;
+
+                            el.style.transform = `translate(${curLeft}px, ${curTop}px) rotate(${rotation * ease}deg)`;
+
+                            el.style.opacity = 1 - Math.min(0.9, t*1.1);
+
+                            requestAnimationFrame(frame);
+
+                        }
+
+                        requestAnimationFrame(frame);
+
+                    };
+
+                    setTimeout(start, delay*1000);
+
+                })(el, startLeft, duration, delay);
+
+            }
+
+        })();
+
+
+
+        /* ---------- Accessibility/keyboard: allow Enter to toggle floating notes ----- */
+
+        document.querySelectorAll('.floating-note').forEach(el => {
+
+            el.setAttribute('tabindex','0');
+
+            el.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }});
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>\
